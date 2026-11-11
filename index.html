@@ -1,0 +1,1390 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
+    <title>Qualif'Immo Express — Budget acheteur en 30 secondes</title>
+    <style>
+/*! tailwindcss v4.3.3 | MIT License | https://tailwindcss.com */
+@layer properties;
+@layer theme {
+  :root, :host {
+    --font-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New',
+    monospace;
+    --color-red-400: oklch(70.4% 0.191 22.216);
+    --color-red-700: oklch(50.5% 0.213 27.518);
+    --color-amber-50: oklch(98.7% 0.022 95.277);
+    --color-amber-100: oklch(96.2% 0.059 95.617);
+    --color-amber-200: oklch(92.4% 0.12 95.746);
+    --color-amber-300: oklch(87.9% 0.169 91.605);
+    --color-amber-400: oklch(82.8% 0.189 84.429);
+    --color-amber-500: oklch(76.9% 0.188 70.08);
+    --color-amber-900: oklch(41.4% 0.112 45.904);
+    --color-amber-950: oklch(27.9% 0.077 45.635);
+    --color-emerald-50: oklch(97.9% 0.021 166.113);
+    --color-emerald-100: oklch(95% 0.052 163.051);
+    --color-emerald-200: oklch(90.5% 0.093 164.15);
+    --color-emerald-300: oklch(84.5% 0.143 164.978);
+    --color-emerald-400: oklch(76.5% 0.177 163.223);
+    --color-emerald-500: oklch(69.6% 0.17 162.48);
+    --color-emerald-700: oklch(50.8% 0.118 165.612);
+    --color-emerald-800: oklch(43.2% 0.095 166.913);
+    --color-emerald-900: oklch(37.8% 0.077 168.94);
+    --color-emerald-950: oklch(26.2% 0.051 172.552);
+    --color-blue-400: oklch(70.7% 0.165 254.624);
+    --color-blue-700: oklch(48.8% 0.243 264.376);
+    --color-rose-50: oklch(96.9% 0.015 12.422);
+    --color-rose-100: oklch(94.1% 0.03 12.58);
+    --color-rose-200: oklch(89.2% 0.058 10.001);
+    --color-rose-800: oklch(45.5% 0.188 13.697);
+    --color-rose-900: oklch(41% 0.159 10.272);
+    --color-rose-950: oklch(27.1% 0.105 12.094);
+    --color-slate-50: oklch(98.4% 0.003 247.858);
+    --color-slate-100: oklch(96.8% 0.007 247.896);
+    --color-slate-200: oklch(92.9% 0.013 255.508);
+    --color-slate-300: oklch(86.9% 0.022 252.894);
+    --color-slate-500: oklch(55.4% 0.046 257.417);
+    --color-slate-600: oklch(44.6% 0.043 257.281);
+    --color-slate-700: oklch(37.2% 0.044 257.287);
+    --color-slate-800: oklch(27.9% 0.041 260.031);
+    --color-slate-900: oklch(20.8% 0.042 265.755);
+    --color-slate-950: oklch(12.9% 0.042 264.695);
+    --color-gray-200: oklch(92.8% 0.006 264.531);
+    --color-gray-400: oklch(70.7% 0.022 261.325);
+    --color-white: #fff;
+    --spacing: 0.25rem;
+    --container-md: 28rem;
+    --container-3xl: 48rem;
+    --text-xs: 0.75rem;
+    --text-xs--line-height: calc(1 / 0.75);
+    --text-sm: 0.875rem;
+    --text-sm--line-height: calc(1.25 / 0.875);
+    --text-base: 1rem;
+    --text-base--line-height: calc(1.5 / 1);
+    --text-lg: 1.125rem;
+    --text-lg--line-height: calc(1.75 / 1.125);
+    --text-xl: 1.25rem;
+    --text-xl--line-height: calc(1.75 / 1.25);
+    --text-4xl: 2.25rem;
+    --text-4xl--line-height: calc(2.5 / 2.25);
+    --text-5xl: 3rem;
+    --text-5xl--line-height: 1;
+    --font-weight-medium: 500;
+    --font-weight-semibold: 600;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+    --font-weight-black: 900;
+    --tracking-tight: -0.025em;
+    --tracking-wider: 0.05em;
+    --leading-tight: 1.25;
+    --radius-lg: 0.5rem;
+    --radius-xl: 0.75rem;
+    --radius-2xl: 1rem;
+    --default-transition-duration: 150ms;
+    --default-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    --default-font-family: var(--font-sans);
+    --default-mono-font-family: var(--font-mono);
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    border: 0 solid;
+  }
+  html, :host {
+    line-height: 1.5;
+    -webkit-text-size-adjust: 100%;
+    tab-size: 4;
+    font-family: var(--default-font-family, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', 'Noto Sans', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji');
+    font-feature-settings: var(--default-font-feature-settings, normal);
+    font-variation-settings: var(--default-font-variation-settings, normal);
+    -webkit-tap-highlight-color: transparent;
+  }
+  hr {
+    height: 0;
+    color: inherit;
+    border-top-width: 1px;
+  }
+  abbr:where([title]) {
+    -webkit-text-decoration: underline dotted;
+    text-decoration: underline dotted;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  a {
+    color: inherit;
+    -webkit-text-decoration: inherit;
+    text-decoration: inherit;
+  }
+  b, strong {
+    font-weight: bolder;
+  }
+  code, kbd, samp, pre {
+    font-family: var(--default-mono-font-family, ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, 'Liberation Mono', 'Courier New', monospace);
+    font-feature-settings: var(--default-mono-font-feature-settings, normal);
+    font-variation-settings: var(--default-mono-font-variation-settings, normal);
+    font-size: 1em;
+  }
+  small {
+    font-size: 80%;
+  }
+  sub, sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+  }
+  sub {
+    bottom: -0.25em;
+  }
+  sup {
+    top: -0.5em;
+  }
+  table {
+    text-indent: 0;
+    border-color: inherit;
+    border-collapse: collapse;
+  }
+  :-moz-focusring:where(:not(iframe)) {
+    outline: auto;
+  }
+  progress {
+    vertical-align: baseline;
+  }
+  summary {
+    display: list-item;
+  }
+  ol, ul, menu {
+    list-style: none;
+  }
+  img, svg, video, canvas, audio, iframe, embed, object {
+    display: block;
+    vertical-align: middle;
+  }
+  img, video {
+    max-width: 100%;
+    height: auto;
+  }
+  button, input, select, optgroup, textarea, ::file-selector-button {
+    font: inherit;
+    font-feature-settings: inherit;
+    font-variation-settings: inherit;
+    letter-spacing: inherit;
+    color: inherit;
+    border-radius: 0;
+    background-color: transparent;
+    opacity: 1;
+  }
+  :where(select:is([multiple], [size])) optgroup {
+    font-weight: bolder;
+  }
+  :where(select:is([multiple], [size])) optgroup option {
+    padding-inline-start: 20px;
+  }
+  ::file-selector-button {
+    margin-inline-end: 4px;
+  }
+  ::placeholder {
+    opacity: 1;
+  }
+  @supports (not (-webkit-appearance: -apple-pay-button))  or (contain-intrinsic-size: 1px) {
+    ::placeholder {
+      color: currentcolor;
+      @supports (color: color-mix(in lab, red, red)) {
+        color: color-mix(in oklab, currentcolor 50%, transparent);
+      }
+    }
+  }
+  textarea {
+    resize: vertical;
+  }
+  ::-webkit-search-decoration {
+    -webkit-appearance: none;
+  }
+  ::-webkit-date-and-time-value {
+    min-height: 1lh;
+    text-align: inherit;
+  }
+  ::-webkit-datetime-edit {
+    display: inline-flex;
+  }
+  ::-webkit-datetime-edit-fields-wrapper {
+    padding: 0;
+  }
+  ::-webkit-datetime-edit, ::-webkit-datetime-edit-year-field, ::-webkit-datetime-edit-month-field, ::-webkit-datetime-edit-day-field, ::-webkit-datetime-edit-hour-field, ::-webkit-datetime-edit-minute-field, ::-webkit-datetime-edit-second-field, ::-webkit-datetime-edit-millisecond-field, ::-webkit-datetime-edit-meridiem-field {
+    padding-block: 0;
+  }
+  ::-webkit-calendar-picker-indicator {
+    line-height: 1;
+  }
+  :-moz-ui-invalid {
+    box-shadow: none;
+  }
+  button, input:where([type='button'], [type='reset'], [type='submit']), ::file-selector-button {
+    appearance: button;
+  }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button {
+    height: auto;
+  }
+  [hidden]:where(:not([hidden='until-found'])) {
+    display: none !important;
+  }
+}
+@layer utilities {
+  .fixed {
+    position: fixed;
+  }
+  .top-4 {
+    top: calc(var(--spacing) * 4);
+  }
+  .right-0 {
+    right: 0px;
+  }
+  .right-4 {
+    right: calc(var(--spacing) * 4);
+  }
+  .bottom-0 {
+    bottom: 0px;
+  }
+  .left-0 {
+    left: 0px;
+  }
+  .left-4 {
+    left: calc(var(--spacing) * 4);
+  }
+  .z-40 {
+    z-index: 40;
+  }
+  .z-50 {
+    z-index: 50;
+  }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mt-0\.5 {
+    margin-top: calc(var(--spacing) * 0.5);
+  }
+  .mt-1 {
+    margin-top: var(--spacing);
+  }
+  .mt-3 {
+    margin-top: calc(var(--spacing) * 3);
+  }
+  .mt-4 {
+    margin-top: calc(var(--spacing) * 4);
+  }
+  .mb-1 {
+    margin-bottom: var(--spacing);
+  }
+  .mb-1\.5 {
+    margin-bottom: calc(var(--spacing) * 1.5);
+  }
+  .ml-1 {
+    margin-left: var(--spacing);
+  }
+  .ml-auto {
+    margin-left: auto;
+  }
+  .block {
+    display: block;
+  }
+  .flex {
+    display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .hidden {
+    display: none;
+  }
+  .inline-block {
+    display: inline-block;
+  }
+  .h-6 {
+    height: calc(var(--spacing) * 6);
+  }
+  .h-10 {
+    height: calc(var(--spacing) * 10);
+  }
+  .h-16 {
+    height: calc(var(--spacing) * 16);
+  }
+  .min-h-\[44px\] {
+    min-height: 44px;
+  }
+  .min-h-screen {
+    min-height: 100vh;
+  }
+  .w-6 {
+    width: calc(var(--spacing) * 6);
+  }
+  .w-10 {
+    width: calc(var(--spacing) * 10);
+  }
+  .w-20 {
+    width: calc(var(--spacing) * 20);
+  }
+  .w-24 {
+    width: calc(var(--spacing) * 24);
+  }
+  .w-full {
+    width: 100%;
+  }
+  .max-w-3xl {
+    max-width: var(--container-3xl);
+  }
+  .max-w-md {
+    max-width: var(--container-md);
+  }
+  .min-w-0 {
+    min-width: 0px;
+  }
+  .flex-1 {
+    flex: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
+  }
+  .list-decimal {
+    list-style-type: decimal;
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .items-center {
+    align-items: center;
+  }
+  .justify-between {
+    justify-content: space-between;
+  }
+  .justify-center {
+    justify-content: center;
+  }
+  .justify-end {
+    justify-content: flex-end;
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .gap-3 {
+    gap: calc(var(--spacing) * 3);
+  }
+  :where(.space-y-1\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 1.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 1.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-2 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-2\.5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 2.5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 2.5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-3 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 3) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 3) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-4 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 4) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  :where(.space-y-5 > :not(:last-child)) {
+    --tw-space-y-reverse: 0;
+    margin-block-start: calc(calc(var(--spacing) * 5) * var(--tw-space-y-reverse));
+    margin-block-end: calc(calc(var(--spacing) * 5) * calc(1 - var(--tw-space-y-reverse)));
+  }
+  .truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  .rounded-2xl {
+    border-radius: var(--radius-2xl);
+  }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
+  .rounded-lg {
+    border-radius: var(--radius-lg);
+  }
+  .rounded-xl {
+    border-radius: var(--radius-xl);
+  }
+  .border {
+    border-style: var(--tw-border-style);
+    border-width: 1px;
+  }
+  .border-2 {
+    border-style: var(--tw-border-style);
+    border-width: 2px;
+  }
+  .border-t {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 1px;
+  }
+  .border-t-2 {
+    border-top-style: var(--tw-border-style);
+    border-top-width: 2px;
+  }
+  .border-amber-200 {
+    border-color: var(--color-amber-200);
+  }
+  .border-amber-300 {
+    border-color: var(--color-amber-300);
+  }
+  .border-amber-400 {
+    border-color: var(--color-amber-400);
+  }
+  .border-blue-400 {
+    border-color: var(--color-blue-400);
+  }
+  .border-emerald-200 {
+    border-color: var(--color-emerald-200);
+  }
+  .border-emerald-300 {
+    border-color: var(--color-emerald-300);
+  }
+  .border-emerald-400 {
+    border-color: var(--color-emerald-400);
+  }
+  .border-red-400 {
+    border-color: var(--color-red-400);
+  }
+  .border-rose-200 {
+    border-color: var(--color-rose-200);
+  }
+  .border-slate-200 {
+    border-color: var(--color-slate-200);
+  }
+  .border-slate-700 {
+    border-color: var(--color-slate-700);
+  }
+  .border-white\/25 {
+    border-color: color-mix(in srgb, #fff 25%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-white) 25%, transparent);
+    }
+  }
+  .bg-amber-50 {
+    background-color: var(--color-amber-50);
+  }
+  .bg-amber-100 {
+    background-color: var(--color-amber-100);
+  }
+  .bg-amber-400 {
+    background-color: var(--color-amber-400);
+  }
+  .bg-amber-500 {
+    background-color: var(--color-amber-500);
+  }
+  .bg-blue-700 {
+    background-color: var(--color-blue-700);
+  }
+  .bg-emerald-50 {
+    background-color: var(--color-emerald-50);
+  }
+  .bg-emerald-100 {
+    background-color: var(--color-emerald-100);
+  }
+  .bg-emerald-500 {
+    background-color: var(--color-emerald-500);
+  }
+  .bg-emerald-700 {
+    background-color: var(--color-emerald-700);
+  }
+  .bg-red-700 {
+    background-color: var(--color-red-700);
+  }
+  .bg-rose-50 {
+    background-color: var(--color-rose-50);
+  }
+  .bg-rose-100 {
+    background-color: var(--color-rose-100);
+  }
+  .bg-slate-50 {
+    background-color: var(--color-slate-50);
+  }
+  .bg-slate-100 {
+    background-color: var(--color-slate-100);
+  }
+  .bg-slate-800 {
+    background-color: var(--color-slate-800);
+  }
+  .bg-slate-900 {
+    background-color: var(--color-slate-900);
+  }
+  .bg-transparent {
+    background-color: transparent;
+  }
+  .bg-white {
+    background-color: var(--color-white);
+  }
+  .bg-white\/15 {
+    background-color: color-mix(in srgb, #fff 15%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      background-color: color-mix(in oklab, var(--color-white) 15%, transparent);
+    }
+  }
+  .bg-gradient-to-r {
+    --tw-gradient-position: to right in oklab;
+    background-image: linear-gradient(var(--tw-gradient-stops));
+  }
+  .from-amber-50 {
+    --tw-gradient-from: var(--color-amber-50);
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .via-white {
+    --tw-gradient-via: var(--color-white);
+    --tw-gradient-via-stops: var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-via) var(--tw-gradient-via-position), var(--tw-gradient-to) var(--tw-gradient-to-position);
+    --tw-gradient-stops: var(--tw-gradient-via-stops);
+  }
+  .to-amber-50\/70 {
+    --tw-gradient-to: color-mix(in srgb, oklch(98.7% 0.022 95.277) 70%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      --tw-gradient-to: color-mix(in oklab, var(--color-amber-50) 70%, transparent);
+    }
+    --tw-gradient-stops: var(--tw-gradient-via-stops, var(--tw-gradient-position), var(--tw-gradient-from) var(--tw-gradient-from-position), var(--tw-gradient-to) var(--tw-gradient-to-position));
+  }
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
+  .p-3 {
+    padding: calc(var(--spacing) * 3);
+  }
+  .p-3\.5 {
+    padding: calc(var(--spacing) * 3.5);
+  }
+  .p-4 {
+    padding: calc(var(--spacing) * 4);
+  }
+  .p-5 {
+    padding: calc(var(--spacing) * 5);
+  }
+  .px-1 {
+    padding-inline: var(--spacing);
+  }
+  .px-3 {
+    padding-inline: calc(var(--spacing) * 3);
+  }
+  .px-4 {
+    padding-inline: calc(var(--spacing) * 4);
+  }
+  .py-1\.5 {
+    padding-block: calc(var(--spacing) * 1.5);
+  }
+  .py-2 {
+    padding-block: calc(var(--spacing) * 2);
+  }
+  .py-2\.5 {
+    padding-block: calc(var(--spacing) * 2.5);
+  }
+  .py-3 {
+    padding-block: calc(var(--spacing) * 3);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .pt-1 {
+    padding-top: var(--spacing);
+  }
+  .pb-20 {
+    padding-bottom: calc(var(--spacing) * 20);
+  }
+  .pl-5 {
+    padding-left: calc(var(--spacing) * 5);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+  .text-4xl {
+    font-size: var(--text-4xl);
+    line-height: var(--tw-leading, var(--text-4xl--line-height));
+  }
+  .text-base {
+    font-size: var(--text-base);
+    line-height: var(--tw-leading, var(--text-base--line-height));
+  }
+  .text-lg {
+    font-size: var(--text-lg);
+    line-height: var(--tw-leading, var(--text-lg--line-height));
+  }
+  .text-sm {
+    font-size: var(--text-sm);
+    line-height: var(--tw-leading, var(--text-sm--line-height));
+  }
+  .text-xl {
+    font-size: var(--text-xl);
+    line-height: var(--tw-leading, var(--text-xl--line-height));
+  }
+  .text-xs {
+    font-size: var(--text-xs);
+    line-height: var(--tw-leading, var(--text-xs--line-height));
+  }
+  .text-\[11px\] {
+    font-size: 11px;
+  }
+  .leading-tight {
+    --tw-leading: var(--leading-tight);
+    line-height: var(--leading-tight);
+  }
+  .font-black {
+    --tw-font-weight: var(--font-weight-black);
+    font-weight: var(--font-weight-black);
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .font-extrabold {
+    --tw-font-weight: var(--font-weight-extrabold);
+    font-weight: var(--font-weight-extrabold);
+  }
+  .font-medium {
+    --tw-font-weight: var(--font-weight-medium);
+    font-weight: var(--font-weight-medium);
+  }
+  .font-semibold {
+    --tw-font-weight: var(--font-weight-semibold);
+    font-weight: var(--font-weight-semibold);
+  }
+  .tracking-tight {
+    --tw-tracking: var(--tracking-tight);
+    letter-spacing: var(--tracking-tight);
+  }
+  .tracking-wider {
+    --tw-tracking: var(--tracking-wider);
+    letter-spacing: var(--tracking-wider);
+  }
+  .text-amber-900 {
+    color: var(--color-amber-900);
+  }
+  .text-amber-950 {
+    color: var(--color-amber-950);
+  }
+  .text-emerald-700 {
+    color: var(--color-emerald-700);
+  }
+  .text-emerald-800 {
+    color: var(--color-emerald-800);
+  }
+  .text-emerald-900 {
+    color: var(--color-emerald-900);
+  }
+  .text-emerald-950 {
+    color: var(--color-emerald-950);
+  }
+  .text-rose-800 {
+    color: var(--color-rose-800);
+  }
+  .text-rose-900 {
+    color: var(--color-rose-900);
+  }
+  .text-rose-950 {
+    color: var(--color-rose-950);
+  }
+  .text-slate-300 {
+    color: var(--color-slate-300);
+  }
+  .text-slate-500 {
+    color: var(--color-slate-500);
+  }
+  .text-slate-600 {
+    color: var(--color-slate-600);
+  }
+  .text-slate-700 {
+    color: var(--color-slate-700);
+  }
+  .text-slate-800 {
+    color: var(--color-slate-800);
+  }
+  .text-slate-900 {
+    color: var(--color-slate-900);
+  }
+  .text-slate-950 {
+    color: var(--color-slate-950);
+  }
+  .text-white {
+    color: var(--color-white);
+  }
+  .text-white\/80 {
+    color: color-mix(in srgb, #fff 80%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 80%, transparent);
+    }
+  }
+  .text-white\/85 {
+    color: color-mix(in srgb, #fff 85%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      color: color-mix(in oklab, var(--color-white) 85%, transparent);
+    }
+  }
+  .uppercase {
+    text-transform: uppercase;
+  }
+  .italic {
+    font-style: italic;
+  }
+  .tabular-nums {
+    --tw-numeric-spacing: tabular-nums;
+    font-variant-numeric: var(--tw-ordinal,) var(--tw-slashed-zero,) var(--tw-numeric-figure,) var(--tw-numeric-spacing,) var(--tw-numeric-fraction,);
+  }
+  .opacity-0 {
+    opacity: 0%;
+  }
+  .shadow-2xl {
+    --tw-shadow: 0 25px 50px -12px var(--tw-shadow-color, rgb(0 0 0 / 0.25));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-\[0_-4px_12px_rgba\(0\,0\,0\,0\.06\)\] {
+    --tw-shadow: 0 -4px 12px var(--tw-shadow-color, rgba(0,0,0,0.06));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-lg {
+    --tw-shadow: 0 10px 15px -3px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 4px 6px -4px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-md {
+    --tw-shadow: 0 4px 6px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 2px 4px -2px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .shadow-sm {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-4 {
+    --tw-ring-shadow: var(--tw-ring-inset,) 0 0 0 calc(4px + var(--tw-ring-offset-width)) var(--tw-ring-color, currentcolor);
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+  .ring-white {
+    --tw-ring-color: var(--color-white);
+  }
+  .transition-all {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+  .duration-300 {
+    --tw-duration: 300ms;
+    transition-duration: 300ms;
+  }
+  .focus\:outline-none:focus {
+    --tw-outline-style: none;
+    outline-style: none;
+  }
+  @media (width >= 40rem) {
+    .sm\:left-auto {
+      left: auto;
+    }
+    .sm\:text-5xl {
+      font-size: var(--text-5xl);
+      line-height: var(--tw-leading, var(--text-5xl--line-height));
+    }
+    .sm\:text-xl {
+      font-size: var(--text-xl);
+      line-height: var(--tw-leading, var(--text-xl--line-height));
+    }
+  }
+}
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  button:not(:disabled), [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+  input::placeholder, textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+}
+@property --tw-space-y-reverse {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0;
+}
+@property --tw-border-style {
+  syntax: "*";
+  inherits: false;
+  initial-value: solid;
+}
+@property --tw-gradient-position {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-via {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-to {
+  syntax: "<color>";
+  inherits: false;
+  initial-value: #0000;
+}
+@property --tw-gradient-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-via-stops {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-gradient-from-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 0%;
+}
+@property --tw-gradient-via-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 50%;
+}
+@property --tw-gradient-to-position {
+  syntax: "<length-percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-leading {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-tracking {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ordinal {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-slashed-zero {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-figure {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-spacing {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-numeric-fraction {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-inset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-shadow-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-shadow-alpha {
+  syntax: "<percentage>";
+  inherits: false;
+  initial-value: 100%;
+}
+@property --tw-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-inset-ring-color {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-inset-ring-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-ring-inset {
+  syntax: "*";
+  inherits: false;
+}
+@property --tw-ring-offset-width {
+  syntax: "<length>";
+  inherits: false;
+  initial-value: 0px;
+}
+@property --tw-ring-offset-color {
+  syntax: "*";
+  inherits: false;
+  initial-value: #fff;
+}
+@property --tw-ring-offset-shadow {
+  syntax: "*";
+  inherits: false;
+  initial-value: 0 0 #0000;
+}
+@property --tw-duration {
+  syntax: "*";
+  inherits: false;
+}
+@layer properties {
+  @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
+    *, ::before, ::after, ::backdrop {
+      --tw-space-y-reverse: 0;
+      --tw-border-style: solid;
+      --tw-gradient-position: initial;
+      --tw-gradient-from: #0000;
+      --tw-gradient-via: #0000;
+      --tw-gradient-to: #0000;
+      --tw-gradient-stops: initial;
+      --tw-gradient-via-stops: initial;
+      --tw-gradient-from-position: 0%;
+      --tw-gradient-via-position: 50%;
+      --tw-gradient-to-position: 100%;
+      --tw-leading: initial;
+      --tw-font-weight: initial;
+      --tw-tracking: initial;
+      --tw-ordinal: initial;
+      --tw-slashed-zero: initial;
+      --tw-numeric-figure: initial;
+      --tw-numeric-spacing: initial;
+      --tw-numeric-fraction: initial;
+      --tw-shadow: 0 0 #0000;
+      --tw-shadow-color: initial;
+      --tw-shadow-alpha: 100%;
+      --tw-inset-shadow: 0 0 #0000;
+      --tw-inset-shadow-color: initial;
+      --tw-inset-shadow-alpha: 100%;
+      --tw-ring-color: initial;
+      --tw-ring-shadow: 0 0 #0000;
+      --tw-inset-ring-color: initial;
+      --tw-inset-ring-shadow: 0 0 #0000;
+      --tw-ring-inset: initial;
+      --tw-ring-offset-width: 0px;
+      --tw-ring-offset-color: #fff;
+      --tw-ring-offset-shadow: 0 0 #0000;
+      --tw-duration: initial;
+    }
+  }
+}
+
+
+
+        :root { --brand-primary: #1e40af; --brand-light: #eff6ff; --brand-border: #bfdbfe; }
+        body { font-family: system-ui, -apple-system, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif; background: #f1f5f9; color: #0f172a; -webkit-tap-highlight-color: transparent; }
+        .bg-brand { background-color: var(--brand-primary); }
+        .bg-brand-light { background-color: var(--brand-light); }
+        .text-brand { color: var(--brand-primary); }
+        .border-brand { border-color: var(--brand-primary); }
+        input[type="range"] { -webkit-appearance: none; appearance: none; width: 100%; height: 8px; background: #cbd5e1; border-radius: 999px; outline: none; }
+        input[type="range"]::-webkit-slider-thumb { -webkit-appearance: none; appearance: none; width: 26px; height: 26px; border-radius: 50%; background: var(--brand-primary); border: 3px solid #fff; box-shadow: 0 2px 6px rgba(0,0,0,.28); cursor: pointer; }
+        input[type="range"]::-moz-range-thumb { width: 24px; height: 24px; border-radius: 50%; background: var(--brand-primary); border: 3px solid #fff; cursor: pointer; }
+        .num { font-variant-numeric: tabular-nums; }
+        @media print { .no-print { display: none !important; } body { background: #fff; padding-bottom: 0 !important; } }
+    </style>
+</head>
+<body class="min-h-screen pb-20">
+
+    <div id="toast" class="fixed top-4 left-4 right-4 sm:left-auto z-50 hidden transition-all duration-300 opacity-0">
+        <div class="bg-slate-900 text-white px-4 py-3 rounded-xl shadow-2xl max-w-md ml-auto text-sm font-medium" id="toast-message"></div>
+    </div>
+
+    <header class="bg-brand text-white shadow-md">
+        <div class="max-w-3xl mx-auto px-4 py-3 flex items-center gap-3">
+            <div class="w-10 h-10 rounded-xl bg-white/15 border border-white/25 flex items-center justify-center text-xl shrink-0">🏠</div>
+            <div class="min-w-0">
+                <h1 class="text-lg sm:text-xl font-extrabold tracking-tight">Qualif'Immo Express</h1>
+                <p class="text-xs text-white/85 truncate" id="header-sub">Combien ce client peut-il acheter ?</p>
+            </div>
+        </div>
+    </header>
+
+    <main class="max-w-3xl mx-auto px-4 py-4 space-y-4">
+
+        <!-- Expired data banner (shown automatically after 31/12/2026) -->
+        <div id="stale-banner" class="hidden px-4 py-3 rounded-xl bg-amber-100 border-2 border-amber-400 text-sm text-amber-950 font-semibold">
+            ⚠️ Ces taux datent de novembre 2026 et ont peut-être changé. Demandez la version à jour au lycée.
+        </div>
+
+        <!-- Student banner -->
+        <div class="bg-gradient-to-r from-amber-50 via-white to-amber-50/70 border border-amber-300 rounded-2xl p-3.5 flex items-center gap-3 shadow-sm">
+            <span class="w-10 h-10 rounded-xl bg-amber-500 text-white flex items-center justify-center text-lg shrink-0">🎓</span>
+            <div class="min-w-0">
+                <p class="text-sm font-extrabold text-slate-900 leading-tight" id="banner-student">Présenté par un élève de Bac Pro MCV</p>
+                <p class="text-xs font-bold text-slate-700" id="banner-agency">Outil préparé pour votre agence</p>
+                <p class="text-[11px] text-slate-500 mt-0.5">Créé en classe avec M. Nguon, professeur d'éco-gestion au Lycée Georges Brassens (Villepinte).</p>
+            </div>
+        </div>
+
+        <!-- ============================ TAB : CALCULER ============================ -->
+        <div id="tab-calc" class="space-y-4">
+
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-5">
+                <h2 class="text-base font-extrabold text-slate-800">1. Le client</h2>
+
+                <div>
+                    <div class="flex justify-between items-center mb-1.5">
+                        <label for="in-income" class="text-sm font-bold text-slate-700">Revenus nets du foyer, par mois</label>
+                        <div class="flex items-center bg-slate-100 rounded-xl px-3 py-1.5 border border-slate-200">
+                            <input type="number" id="in-income" value="3850" min="0" step="50" oninput="sync('income', this.value)" class="w-20 text-right font-extrabold bg-transparent focus:outline-none num">
+                            <span class="text-sm font-bold text-slate-500 ml-1">€</span>
+                        </div>
+                    </div>
+                    <input type="range" id="sl-income" min="1200" max="10000" step="50" value="3850" oninput="sync('income', this.value)">
+                </div>
+
+                <div>
+                    <div class="flex justify-between items-center mb-1.5">
+                        <label for="in-apport" class="text-sm font-bold text-slate-700">Apport (épargne disponible)</label>
+                        <div class="flex items-center bg-slate-100 rounded-xl px-3 py-1.5 border border-slate-200">
+                            <input type="number" id="in-apport" value="35000" min="0" step="1000" oninput="sync('apport', this.value)" class="w-24 text-right font-extrabold bg-transparent focus:outline-none num">
+                            <span class="text-sm font-bold text-slate-500 ml-1">€</span>
+                        </div>
+                    </div>
+                    <input type="range" id="sl-apport" min="0" max="150000" step="1000" value="35000" oninput="sync('apport', this.value)">
+                </div>
+
+                <div class="grid grid-cols-2 gap-3">
+                    <div>
+                        <span class="block text-sm font-bold text-slate-700 mb-1.5">Durée du prêt</span>
+                        <div class="grid grid-cols-2 gap-1.5">
+                            <button type="button" data-years="20" class="year-btn min-h-[44px] rounded-xl text-sm border">20 ans</button>
+                            <button type="button" data-years="25" class="year-btn min-h-[44px] rounded-xl text-sm border">25 ans</button>
+                        </div>
+                    </div>
+                    <div>
+                        <label for="in-debts" class="block text-sm font-bold text-slate-700 mb-1.5">Autres crédits / mois</label>
+                        <div class="flex items-center bg-slate-100 rounded-xl px-3 py-2.5 border border-slate-200">
+                            <input type="number" id="in-debts" value="0" min="0" step="10" oninput="calculate()" class="w-full font-extrabold bg-transparent focus:outline-none num">
+                            <span class="text-sm font-bold text-slate-500 ml-1">€</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- RESULT -->
+            <section class="bg-brand text-white rounded-2xl shadow-lg p-5 text-center">
+                <p class="text-xs font-bold uppercase tracking-wider text-white/80">Ce client peut acheter un bien jusqu'à environ</p>
+                <p class="text-4xl sm:text-5xl font-black mt-1 num" id="out-price">—</p>
+                <p class="text-sm text-white/85 mt-1">dans l'ancien, frais de notaire compris</p>
+                <div class="grid grid-cols-2 gap-2 mt-4">
+                    <div class="bg-white/15 rounded-xl p-2.5">
+                        <p class="text-[11px] text-white/80">Mensualité maximale</p>
+                        <p class="text-lg font-extrabold num" id="out-monthly">—</p>
+                    </div>
+                    <div class="bg-white/15 rounded-xl p-2.5">
+                        <p class="text-[11px] text-white/80">Montant empruntable</p>
+                        <p class="text-lg font-extrabold num" id="out-loan">—</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- TARGET PROPERTY -->
+            <section class="bg-white rounded-2xl shadow-sm border border-slate-200 p-4 space-y-3">
+                <h2 class="text-base font-extrabold text-slate-800">2. Le bien visé rentre-t-il dans le budget ?</h2>
+                <div class="flex items-center gap-2">
+                    <label for="in-target" class="text-sm font-bold text-slate-700 shrink-0">Prix affiché</label>
+                    <div class="flex-1 flex items-center bg-slate-100 rounded-xl px-3 py-2 border border-slate-200">
+                        <input type="number" id="in-target" value="250000" min="0" step="1000" oninput="calculate()" class="w-full text-right font-extrabold bg-transparent focus:outline-none num">
+                        <span class="text-sm font-bold text-slate-500 ml-1">€</span>
+                    </div>
+                </div>
+                <div id="out-verdict" class="rounded-xl p-3 text-sm font-bold"></div>
+            </section>
+
+            <!-- STEP BY STEP -->
+            <section class="bg-white rounded-2xl shadow-sm border-2 border-amber-300 p-4">
+                <div class="flex items-center justify-between gap-2">
+                    <h2 class="text-base font-extrabold text-slate-800">3. Le calcul, étape par étape</h2>
+                    <button type="button" id="btn-steps" onclick="toggleSteps()" class="no-print px-3 py-1.5 rounded-lg bg-amber-100 text-amber-900 text-xs font-extrabold">Voir le calcul</button>
+                </div>
+                <ol id="steps" class="hidden mt-3 space-y-2.5 text-sm text-slate-800"></ol>
+                <p class="text-[11px] text-slate-500 mt-3">Taux moyens du marché en novembre 2026 : 3,80 % sur 20 ans, 3,90 % sur 25 ans, plus 0,40 % d'assurance. Calcul simplifié : seule la banque du client peut confirmer un prêt.</p>
+            </section>
+        </div>
+
+        <!-- ============================ TAB : PITCH & RÉGLAGES ============================ -->
+        <div id="tab-pitch" class="hidden space-y-4 no-print">
+
+            <section class="bg-slate-900 text-white rounded-2xl p-5 space-y-3">
+                <h2 class="text-base font-extrabold">1. Préparer l'outil avant d'entrer</h2>
+                <label class="block text-xs font-semibold text-slate-300">Nom de l'agence
+                    <input type="text" id="cfg-agency" oninput="saveConfig()" placeholder="Ex : Agence du Centre" class="mt-1 w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm font-bold">
+                </label>
+                <label class="block text-xs font-semibold text-slate-300">Ville
+                    <input type="text" id="cfg-city" oninput="saveConfig()" placeholder="Ex : Villepinte" class="mt-1 w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm font-bold">
+                </label>
+                
+                <label class="block text-xs font-semibold text-slate-300">Votre prénom &amp; classe
+                    <input type="text" id="cfg-student" oninput="saveConfig()" placeholder="Ex : Sarah K. — 1re MCV" class="mt-1 w-full px-3 py-2.5 rounded-xl bg-slate-800 border border-slate-700 text-white text-sm font-bold">
+                </label>
+                
+                <div>
+                    <span class="block text-xs font-semibold text-slate-300 mb-1">Couleur de l'enseigne</span>
+                    <div class="grid grid-cols-4 gap-1.5">
+                        <button type="button" data-theme-btn="blue" onclick="setTheme('blue')" class="py-2.5 rounded-xl bg-blue-700 text-xs font-bold border-2 border-blue-400">Bleu</button>
+                        <button type="button" data-theme-btn="red" onclick="setTheme('red')" class="py-2.5 rounded-xl bg-red-700 text-xs font-bold border-2 border-red-400">Rouge</button>
+                        <button type="button" data-theme-btn="gold" onclick="setTheme('gold')" class="py-2.5 rounded-xl bg-amber-500 text-slate-950 text-xs font-extrabold border-2 border-amber-300">Jaune</button>
+                        <button type="button" data-theme-btn="green" onclick="setTheme('green')" class="py-2.5 rounded-xl bg-emerald-700 text-xs font-bold border-2 border-emerald-400">Vert</button>
+                    </div>
+                </div>
+                <div class="flex justify-end pt-1">
+                    <button type="button" onclick="switchTab('calc')" class="px-4 py-2.5 rounded-xl bg-emerald-500 text-slate-950 text-sm font-extrabold">▶ Lancer la démo</button>
+                </div>
+            </section>
+
+            
+            <section class="bg-white rounded-2xl p-5 border border-slate-200 space-y-3">
+                <h2 class="text-base font-extrabold text-slate-900">2. Mon pitch (30 secondes)</h2>
+                <div class="p-3.5 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="text-xs font-black text-brand uppercase">1. Je me présente</p>
+                    <p class="text-sm text-slate-700 mt-1 italic">« Bonjour, je suis élève de Bac Pro MCV au lycée Georges Brassens de Villepinte. Avec notre professeur, on a créé en classe un petit outil qui calcule en 30 secondes le budget d'un acheteur. Je l'ai préparé pour votre agence. »</p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-amber-50 border border-amber-200">
+                    <p class="text-xs font-black text-amber-900 uppercase">2. Je montre</p>
+                    <p class="text-sm text-slate-800 mt-1 italic" id="pitch-demo-text"></p>
+                </div>
+                <div class="p-3.5 rounded-xl bg-emerald-50 border border-emerald-200">
+                    <p class="text-xs font-black text-emerald-900 uppercase">3. Je demande</p>
+                    <p class="text-sm text-slate-800 mt-1 italic">« Je cherche un stage du … au … Je peux faire ce calcul pour les clients qui appellent, avant les visites. Et il existe une version complète pour les professionnels : notre professeur peut vous la présenter lors de sa visite de stage. »</p>
+                </div>
+            </section>
+
+            <section class="bg-white rounded-2xl p-5 border border-slate-200 space-y-3">
+                <h2 class="text-base font-extrabold text-slate-900">3. Le calcul que je sais faire à la main</h2>
+                <ol class="text-sm text-slate-800 space-y-1.5 list-decimal pl-5">
+                    <li><strong>Mensualité maximale</strong> = revenus × 35 % − autres crédits</li>
+                    <li><strong>Montant empruntable</strong> = mensualité ÷ 100 × <span id="coef-25">…</span> (25 ans) ou × <span id="coef-20">…</span> (20 ans)</li>
+                    <li><strong>Budget total</strong> = montant empruntable + apport</li>
+                    <li><strong>Prix du bien</strong> = budget total ÷ 1,08 (frais de notaire d'environ 8 % dans l'ancien)</li>
+                </ol>
+            </section>
+
+            <section class="bg-white rounded-2xl p-5 border border-slate-200 space-y-2.5">
+                <h2 class="text-base font-extrabold text-slate-900">4. Les questions qu'on peut me poser</h2>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="text-sm font-extrabold">« Pourquoi 35 % ? »</p>
+                    <p class="text-sm text-slate-700 mt-0.5">C'est la règle des banques : les crédits ne doivent pas dépasser 35 % des revenus du foyer.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="text-sm font-extrabold">« D'où vient le chiffre <span class="coef-25-inline">…</span> ? »</p>
+                    <p class="text-sm text-slate-700 mt-0.5">C'est ce qu'on peut emprunter quand on rembourse 100 € par mois pendant 25 ans, au taux moyen de novembre 2026 (3,90 % + l'assurance).</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="text-sm font-extrabold">« Pourquoi diviser par 1,08 ? »</p>
+                    <p class="text-sm text-slate-700 mt-0.5">Parce que dans l'ancien, il faut payer environ 8 % de frais de notaire en plus du prix du bien.</p>
+                </div>
+                <div class="p-3 rounded-xl bg-slate-50 border border-slate-200">
+                    <p class="text-sm font-extrabold">« Et vous, qu'avez-vous fait sur cet outil ? »</p>
+                    <p class="text-sm text-slate-700 mt-0.5">Préparez <strong>votre</strong> vraie réponse. Par exemple : « J'ai fait le calcul à la main pour vérifier l'outil », « J'ai choisi les textes ».</p>
+                </div>
+                <div class="p-3 rounded-xl bg-emerald-50 border-2 border-emerald-300">
+                    <p class="text-xs font-extrabold uppercase text-emerald-800">Si je ne sais pas</p>
+                    <p class="text-sm font-bold text-emerald-950 italic">« Je ne sais pas vous répondre de tête. Je note votre question et je vous envoie la réponse demain. »</p>
+                </div>
+                <div class="p-3 rounded-xl bg-rose-50 border border-rose-200">
+                    <p class="text-xs font-extrabold uppercase text-rose-800">Je ne dis jamais</p>
+                    <p class="text-sm text-rose-950">« Ce client aura son prêt. » Seule la banque peut le dire.</p>
+                </div>
+            </section>
+            
+
+            <section class="bg-slate-100 rounded-2xl p-4 border border-slate-200 space-y-2">
+                <p class="text-sm text-slate-700">Outil gratuit créé en classe par M. Nguon, professeur d'éco-gestion au Lycée Georges Brassens de Villepinte (ancien directeur d'agence bancaire et courtier), avec ses élèves de Bac Pro MCV. Une version complète pour les professionnels existe.</p>
+                <p class="text-xs text-emerald-700 font-semibold">🔒 Aucune donnée client n'est enregistrée : les calculs restent sur l'appareil.</p>
+                <a href="#" data-contact class="hidden inline-block px-4 py-2 rounded-xl bg-brand text-white text-sm font-extrabold">Contacter le professeur</a>
+            </section>
+        </div>
+
+        <p class="text-[11px] text-slate-500 px-1">Simulation simplifiée et indicative. Ce n'est ni une offre de prêt, ni un conseil en crédit. Seule la banque du client peut confirmer un financement.</p>
+    </main>
+
+    <nav class="fixed bottom-0 left-0 right-0 z-40 bg-white border-t border-slate-200 shadow-[0_-4px_12px_rgba(0,0,0,0.06)] no-print">
+        <div class="max-w-3xl mx-auto grid grid-cols-2 h-16">
+            <button type="button" onclick="switchTab('calc')" id="nav-calc" class="nav-btn flex flex-col items-center justify-center text-xs"><span class="text-lg">🧮</span>Calculer</button>
+            <button type="button" onclick="switchTab('pitch')" id="nav-pitch" class="nav-btn flex flex-col items-center justify-center text-xs"><span class="text-lg">🎓</span>Mon pitch &amp; réglages</button>
+        </div>
+    </nav>
+
+    <script>
+        // ================================================================
+        const CONTACT_EMAIL = 'r.nguon75@gmail.com';
+        const DATA_VALID_UNTIL = '2026-12-31';       // au-delà : bandeau « demandez la mise à jour »
+        const RATES = { 20: 3.80, 25: 3.90 };          // taux moyens du marché, novembre 2026
+        const INSURANCE = 0.40;                        // % par an, sur le capital emprunté
+        const NOTARY = 1.08;                           // frais de notaire dans l'ancien ≈ 8 %
+        // ================================================================
+
+        const state = { years: 25, theme: 'blue', stepsOpen: false };
+        const themes = { blue: '#1e40af', red: '#b91c1c', gold: '#a16207', green: '#047857' };
+        const $ = (id) => document.getElementById(id);
+        const num = (id) => { const v = parseFloat($(id).value); return isNaN(v) ? 0 : v; };
+        const eur = (v) => Math.round(v).toLocaleString('fr-FR') + ' €';
+
+        // Ce qu'on peut emprunter pour 100 € par mois (crédit + assurance), arrondi à la centaine
+        function coefficient(years) {
+            const r = RATES[years] / 1200, n = years * 12;
+            const perEuroCredit = r / (1 - Math.pow(1 + r, -n));
+            const perEuroIns = INSURANCE / 1200;
+            return Math.round(100 / (perEuroCredit + perEuroIns) / 100) * 100;
+        }
+
+        function compute(income, apport, debts, years) {
+            const monthly = Math.max(0, Math.round(income * 0.35 - debts)); // arrondi à l'euro, comme dans le calcul à la main
+            const coef = coefficient(years);
+            const loan = monthly / 100 * coef;
+            const budget = loan + apport;
+            const price = budget / NOTARY;
+            return { income, apport, debts, years, monthly, coef, loan, budget, price };
+        }
+
+        function calculate() {
+            const r = compute(num('in-income'), num('in-apport'), num('in-debts'), state.years);
+            $('out-price').textContent = eur(Math.floor(r.price / 1000) * 1000);
+            $('out-monthly').textContent = eur(r.monthly);
+            $('out-loan').textContent = eur(r.loan);
+
+            const target = num('in-target');
+            const v = $('out-verdict');
+            if (target <= 0) {
+                v.className = 'rounded-xl p-3 text-sm font-bold bg-slate-100 text-slate-600';
+                v.textContent = 'Saisissez le prix du bien pour comparer.';
+            } else if (target <= r.price) {
+                v.className = 'rounded-xl p-3 text-sm font-bold bg-emerald-100 text-emerald-900';
+                v.textContent = `✅ Oui : le bien à ${eur(target)} rentre dans le budget (marge d'environ ${eur(r.price - target)}).`;
+            } else {
+                v.className = 'rounded-xl p-3 text-sm font-bold bg-rose-100 text-rose-900';
+                v.textContent = `❌ Non : il manque environ ${eur((target - r.price) * NOTARY)} (plus d'apport, ou un bien moins cher).`;
+            }
+
+            $('steps').innerHTML = [
+                `<strong>Mensualité maximale</strong> : ${eur(r.income)} × 35 %${r.debts ? ' − ' + eur(r.debts) + ' de crédits' : ''} = <strong>${eur(r.monthly)}</strong>`,
+                `<strong>Montant empruntable</strong> : pour 100 € par mois sur ${r.years} ans, on emprunte environ ${eur(r.coef)}. Donc ${eur(r.monthly)} ÷ 100 × ${eur(r.coef)} = <strong>${eur(r.loan)}</strong>`,
+                `<strong>Budget total</strong> : ${eur(r.loan)} + ${eur(r.apport)} d'apport = <strong>${eur(r.budget)}</strong>`,
+                `<strong>Prix du bien</strong> : ${eur(r.budget)} ÷ 1,08 (frais de notaire) = <strong>${eur(r.price)}</strong>`
+            ].map((t, i) => `<li class="flex gap-2"><span class="w-6 h-6 rounded-full bg-amber-400 text-slate-900 text-xs font-black flex items-center justify-center shrink-0">${i + 1}</span><span>${t}</span></li>`).join('');
+
+            ['coef-25', 'coef-20'].forEach(id => { if ($(id)) $(id).textContent = eur(coefficient(id === 'coef-25' ? 25 : 20)); });
+            document.querySelectorAll('.coef-25-inline').forEach(e => e.textContent = eur(coefficient(25)));
+            if ($('pitch-demo-text')) {
+                $('pitch-demo-text').textContent = `« Regardez : un client gagne ${eur(r.income)} par mois et a ${eur(r.apport)} d'apport. Il peut acheter un bien jusqu'à environ ${eur(Math.floor(r.price / 1000) * 1000)}. Je vous montre le calcul ? »`;
+            }
+        }
+
+        function sync(field, value) {
+            $('in-' + field).value = value; $('sl-' + field).value = value;
+            calculate();
+        }
+        function paintYears() {
+            document.querySelectorAll('.year-btn').forEach(b => {
+                b.className = `year-btn min-h-[44px] rounded-xl text-sm border ${parseInt(b.dataset.years, 10) === state.years ? 'bg-brand text-white border-brand font-extrabold' : 'bg-slate-50 text-slate-700 border-slate-200 font-bold'}`;
+            });
+        }
+        function toggleSteps() {
+            state.stepsOpen = !state.stepsOpen;
+            $('steps').classList.toggle('hidden', !state.stepsOpen);
+            $('btn-steps').textContent = state.stepsOpen ? 'Masquer' : 'Voir le calcul';
+        }
+        function switchTab(t) {
+            $('tab-calc').classList.toggle('hidden', t !== 'calc');
+            $('tab-pitch').classList.toggle('hidden', t !== 'pitch');
+            ['calc', 'pitch'].forEach(k => {
+                $('nav-' + k).className = `nav-btn flex flex-col items-center justify-center text-xs ${k === t ? 'text-brand font-extrabold border-t-2 border-brand bg-brand-light' : 'text-slate-500 font-semibold'}`;
+            });
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+        function readConfig() {
+            return { agency: $('cfg-agency').value.trim(), city: $('cfg-city').value.trim(), student: $('cfg-student') ? $('cfg-student').value.trim() : '', theme: state.theme };
+        }
+        function applyConfig() {
+            const c = readConfig();
+            $('banner-student').textContent = c.student ? `Présenté par ${c.student}` : 'Présenté par un élève de Bac Pro MCV';
+            $('banner-agency').textContent = c.agency ? `Outil préparé pour ${c.agency}${c.city ? ' (' + c.city + ')' : ''}` : 'Outil préparé pour votre agence';
+            $('header-sub').textContent = c.agency ? `${c.agency} • Combien ce client peut-il acheter ?` : 'Combien ce client peut-il acheter ?';
+        }
+        function saveConfig() {
+            applyConfig();
+            try { localStorage.setItem('qualifimmo_express', JSON.stringify(readConfig())); } catch (e) {}
+        }
+        function setTheme(k) {
+            state.theme = themes[k] ? k : 'blue';
+            const c = themes[state.theme];
+            document.documentElement.style.setProperty('--brand-primary', c);
+            document.documentElement.style.setProperty('--brand-light', c + '14');
+            document.querySelectorAll('[data-theme-btn]').forEach(b => { const on = b.dataset.themeBtn === state.theme; b.classList.toggle('ring-4', on); b.classList.toggle('ring-white', on); });
+            saveConfig(); paintYears();
+        }
+        function setupContact() {
+            const subject = encodeURIComponent("Accueil d'un stagiaire Bac Pro MCV — Lycée Georges Brassens (Villepinte)");
+            const body = encodeURIComponent("Bonjour Monsieur Nguon,\n\nSuite à la présentation de l'outil Qualif'Immo Express par votre élève, nous souhaitons échanger avec vous au sujet de l'accueil d'un stagiaire (PFMP).\n\nCordialement,");
+            document.querySelectorAll('[data-contact]').forEach(a => {
+                if (CONTACT_EMAIL) { a.href = `mailto:${CONTACT_EMAIL}?subject=${subject}&body=${body}`; a.classList.remove('hidden'); }
+            });
+        }
+
+        window.addEventListener('load', () => {
+            if (new Date() > new Date(DATA_VALID_UNTIL + 'T23:59:59')) $('stale-banner').classList.remove('hidden');
+            document.querySelectorAll('.year-btn').forEach(b => b.addEventListener('click', () => { state.years = parseInt(b.dataset.years, 10); paintYears(); calculate(); }));
+            try {
+                const c = JSON.parse(localStorage.getItem('qualifimmo_express') || 'null');
+                if (c) {
+                    if (c.agency) $('cfg-agency').value = c.agency;
+                    if (c.city) $('cfg-city').value = c.city;
+                    if (c.student && $('cfg-student')) $('cfg-student').value = c.student;
+                    if (c.theme) state.theme = c.theme;
+                }
+            } catch (e) {}
+            setupContact();
+            setTheme(state.theme);
+            switchTab('calc');
+            calculate();
+        });
+    </script>
+</body>
+</html>
